@@ -1,4 +1,4 @@
-@extends('uhelp.app')
+@extends('layouts.app')
 
 @if ($user->isAdmin)
     @section('main')

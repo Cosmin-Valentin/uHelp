@@ -1,0 +1,110 @@
+.welcome-login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 0.75rem;
+    outline: 0;
+}
+
+.welcome-login-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #e6e8ef;
+    border-top-left-radius: calc(0.75rem - 1px);
+    border-top-right-radius: calc(0.75rem - 1px);
+}
+
+.welcome-login-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.welcome-login-body img {
+    width: 50%;
+    max-width: 100%;
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
+}
+
+.welcome-login-title,
+.welcome-login-text {
+    color: #0a1425;
+}
+
+.welcome-login-text {
+    margin-bottom: 0.5rem;
+}
+
+.welcome-login h6 {
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.welcome-login ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.75rem;
+    justify-content: center;
+}
+
+.welcome-login ul > * {
+    padding: 0.5rem;
+}
+
+.welcome-login a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.5rem;
+    justify-content: center;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.welcome-login .btn-blue {
+    background-color: #2b5cfd;
+}
+
+.welcome-login .btn-blue:hover {
+    background-color: #254ed7;
+}
+
+.welcome-login .btn-red {
+    background-color: #fa5b68;
+}
+
+.welcome-login .btn-red:hover {
+    background-color: #d54d58;
+}
+
+.welcome-login .btn-green {
+    background-color: #22c55e;
+}
+
+.welcome-login .btn-green:hover {
+    background-color: #1da750;
+}
+
+.welcome-login .disclaimer {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    margin-top: 1rem;
+}

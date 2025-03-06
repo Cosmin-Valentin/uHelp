@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['admin', 'agent', 'customer'])->default('customer');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -35,6 +36,8 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+        $this->seedUsers();
     }
 
     /**
@@ -45,5 +48,36 @@ return new class extends Migration
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+    }
+
+    public function seedUsers() {
+        if (\App\Models\User::count() === 0) {
+            \App\Models\User::insert([
+                [
+                    'name' => 'Admin User',
+                    'email' => 'superadmin@admin.com',
+                    'password' => bcrypt('123456789'),
+                    'role' => 'admin',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],
+                [
+                    'name' => 'Agent User',
+                    'email' => 'agent@agent.com',
+                    'password' => bcrypt('123456789'),
+                    'role' => 'agent',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],
+                [
+                    'name' => 'Customer User',
+                    'email' => 'customer@customer.com',
+                    'password' => bcrypt('123456789'),
+                    'role' => 'customer',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],
+            ]);
+        }
     }
 };

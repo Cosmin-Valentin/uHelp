@@ -1,12 +1,16 @@
 @extends('layouts.app')
 
-@if ($user->isAdmin)
+@if (!$user->isCustomer)
     @section('main')
         @include('uhelp.partials.agent-aside')
         <div class="agent-main">
             <div class="agent-main-container">
                 <div class="side-app">
-                    <div class="app-header"></div>
+                    <div class="app-header">
+                        <div class="bg-white w-full">
+                            @include('layouts.navigation')
+                        </div>
+                    </div>
                     @include('uhelp.partials.agent-header', ['title' => 'Create Ticket'])
                     @include('uhelp.partials.agent-create')
                 </div>

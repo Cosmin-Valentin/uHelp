@@ -56,17 +56,17 @@
                                         </li>
                                     @else
                                         <li>
-                                            <a href="{{ route('login') }}" class="btn-blue">
+                                            <a href="{{ route('login', ['role' => 'admin']) }}" class="btn-blue">
                                                 Admin Log in
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('login') }}" class="btn-red">
+                                            <a href="{{ route('login', ['role' => 'agent']) }}" class="btn-red">
                                                 Agent Log in
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('login') }}" class="btn-green">
+                                            <a href="{{ route('login', ['role' => 'customer']) }}" class="btn-green">
                                                 Customer Log in
                                             </a>
                                         </li>

@@ -45,4 +45,16 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function getIsAdminAttribute() {
+        return $this->role === 'admin';
+    }
+
+    public function getIsAgentAttribute() {
+        return $this->role === 'agent';
+    }
+
+    public function getIsCustomerAttribute() {
+        return $this->role === 'customer';
+    }
 }

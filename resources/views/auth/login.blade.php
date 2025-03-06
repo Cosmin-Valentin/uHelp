@@ -4,22 +4,39 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
-        <!-- Email Address -->
+        
+        <!-- Email -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            
+            <!-- Conditionally set email based on the role -->
+            @if($role == 'admin')
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'superadmin@admin.com'" required autofocus autocomplete="username" />
+            @elseif($role == 'agent')
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'agent@agent.com'" required autofocus autocomplete="username" />
+            @elseif($role == 'customer')
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'customer@customer.com'" required autofocus autocomplete="username" />
+            @else
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            @endif
+
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+            
+            <!-- Conditionally set password based on the role -->
+            @if($role == 'admin')
+                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" :value="'123456789'" required autocomplete="current-password" />
+            @elseif($role == 'agent')
+                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" :value="'123456789'" required autocomplete="current-password" />
+            @elseif($role == 'customer')
+                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" :value="'123456789'" required autocomplete="current-password" />
+            @else
+                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+            @endif
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>

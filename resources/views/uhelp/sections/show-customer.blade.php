@@ -7,7 +7,11 @@
     <div class="agent-main">
         <div class="agent-main-container">
             <div class="side-app">
-                <div class="app-header"></div>
+                <div class="app-header">
+                    <div class="bg-white w-full">
+                        @include('layouts.navigation')
+                    </div>
+                </div>
                 @include('uhelp.partials.agent-header', ['title' => 'Previous Tickets'])
                 <div class="agent-dashboard">
                     <div class="row">

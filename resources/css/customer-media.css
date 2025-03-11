@@ -1,0 +1,51 @@
+@media screen and (max-width: 1280px) {
+    .customer-main-container,
+    .customer-card,
+    .page-card {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .ticket-type-container > div:first-child {
+        padding-left: 0;
+    }
+
+    .ticket-type-container > div:last-child {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ticket-type-container {
+        flex-wrap: wrap;
+    }
+
+    .ticket-type-container > div {
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .ticket-type-alt {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .form-group .row > div:first-child,
+    .form-group .row > div:last-child {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .card-header {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+}

@@ -49,7 +49,7 @@ body {
 }
 
 .header {
-    font-size: 40px;
+    font-size: 1.8rem;
     color: #fff;
     font-weight: 500;
 }
@@ -101,6 +101,7 @@ body {
     padding: 1.5rem;
     position: relative;
     flex: 1 1 auto;
+    overflow: scroll;
 }
 
 .profile-img {
@@ -185,14 +186,6 @@ body {
     padding: 0 0.75rem;
 }
 
-.ticket-type-container > div:first-child {
-    padding-left: 0;
-}
-
-.ticket-type-container > div:last-child {
-    padding-right: 0;
-}
-
 .ticket-type-body {
     margin: 0;
     padding: 1rem;
@@ -209,7 +202,7 @@ body {
 .ticket-type-info span {
     text-align: left;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--title-color);
 }
 
@@ -702,7 +695,7 @@ footer.customer-footer {
 .form-group label {
     margin-top: 0.5rem;
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9rem;
     color: var(--title-color);
     text-align: left;

@@ -1,6 +1,7 @@
 @import "uHelp.css";
 @import "welcome.css";
 @import "customer-media.css";
+@import "agent-media.css";
 
 @tailwind base;
 @tailwind components;

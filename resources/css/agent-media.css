@@ -1,6 +1,23 @@
+@media screen and (min-width: 1501px) {
+    .agent-ticket-info > div:first-child {
+        max-width: 75%;
+        flex: 0 0 75%;
+    }
+
+    .agent-ticket-info > div:last-child {
+        max-width: 25%;
+        flex: 0 0 25%;
+    }
+}
+
 @media screen and (max-width: 1500px) {
     .agent-dashboard .card-body {
         overflow: scroll;
+    }
+
+    .agent-ticket-info > div {
+        width: 100%;
+        flex: 0 0 100%;
     }
 }
 
@@ -26,6 +43,34 @@
 
     .header-info {
         justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1071px) {
+    .agent-main .ticket-type-container > div:first-child {
+        padding-left: 0;
+    }
+
+    .agent-main .ticket-type-container > div:last-child {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .agent-main .ticket-type-container {
+        flex-wrap: wrap;
+    }
+
+    .agent-main .ticket-type-container > div {
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .ticket-type-alt {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 }
 

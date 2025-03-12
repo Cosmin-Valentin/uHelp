@@ -1059,16 +1059,10 @@ form .card-footer {
     width: 100%;
     padding: 0 0.75rem;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.agent-ticket-info > div:first-child {
-    width: 75%;
-    padding: 0 0.75rem;
-}
-
-.agent-ticket-info > div:last-child {
-    width: 25%;
+.agent-ticket-info > div {
     padding: 0 0.75rem;
 }
 
@@ -1521,7 +1515,7 @@ footer.agent-footer {
 .agent-reply-ticket .panel-collapse.show {
     opacity: 1;
     visibility: visible;
-    max-height: 500px;
+    max-height: 520px;
     transition: opacity 0.3s ease-in, max-height 0.3s ease-in;
 }
 

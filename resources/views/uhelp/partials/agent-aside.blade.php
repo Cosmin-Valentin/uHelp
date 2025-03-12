@@ -12,7 +12,7 @@
                 <img src="https://randomuser.me/api/portraits/men/{{ $user->id }}.jpg" alt="user avatar">
             </div>
             <div class="user-info">
-                <h5>Admin</h5>
+                <h5>{{ $user->isAdmin ? 'Admin' : 'Agent' }}</h5>
                 <span>{{ ucwords($user->name) }}</span>
             </div>
         </div>

@@ -12,9 +12,9 @@
 
     <button class="btn-small" {{ $ticket->status === 'closed' ? 'disabled' : '' }}>
         @if ($ticket->assignee_id === auth()->id())
-            Admin (self)
+            Self
         @elseif(isset($ticket->assignee_id))
-            Agent
+            {{ explode(' ', $ticket->assignee->name)[0] }}
         @else
             Assign
         @endif

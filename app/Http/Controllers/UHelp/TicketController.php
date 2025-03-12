@@ -24,8 +24,10 @@ class TicketController extends Controller
             $query->where('status', '!=', 'closed');
         } 
 
-        if(!$user->isAdmin) {
+        if($user->isCustomer) {
             $query->where('created_by', $user->id);
+        } else if($user->isAgent) {
+            $query->where('assignee_id', $user->id);
         }
 
         $tickets = $query->orderBy('created_at', 'desc')->get();

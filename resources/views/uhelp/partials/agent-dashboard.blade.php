@@ -133,7 +133,7 @@
                                                             </ul>
                                                         </div>
                                                     </td>
-                                                    <td>{{ $ticket->author->name }} {{ !$ticket->author->isAdmin ? '(Customer)' : '' }}</td>
+                                                    <td>{{ $ticket->author->name }} {{ $ticket->author->isAdmin ? '(Admin)' : ($ticket->author->isAgent ? '(Agent)' : '(Customer)' ) }}</td>
                                                     <td>
                                                         {!! $ticket->status_html !!}
                                                     </td>

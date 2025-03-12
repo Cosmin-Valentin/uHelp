@@ -44,6 +44,10 @@
     .header-info {
         justify-content: flex-start;
     }
+
+    .btn-list .dropdown.show {
+        inset: 35px auto auto 0px;
+    }
 }
 
 @media screen and (min-width: 1071px) {

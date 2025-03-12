@@ -12,7 +12,7 @@
                 <select name="assignee_id" required>
                     <option label="Select Agent"></option>
                     @foreach ($users as $user)
-                        <option value="{{ $user->id }}">{{ ucwords($user->name) }}</option>
+                        <option value="{{ $user->id }}">{{ ucwords($user->name) }} {{ $user->isAdmin ? '(Admin)' : ($user->isAgent ? '(Agent)' : '(Customer)') }}</option>
                     @endforeach   
                 </select>
             </div>

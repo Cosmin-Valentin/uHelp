@@ -148,7 +148,7 @@
                 <div class="card-body">
                     <div class="profile-pic">
                         <div class="profile-pic-img">
-                            <img src="https://randomuser.me/api/portraits/men/{{ $ticket->author->id }}.jpg" alt="user avatar">
+                            <img src="{{ asset($ticket->author->id . '.jpg') }}" alt="user avatar">
                         </div>
                         <div>
                             <h5>{{ $ticket->author->name }}</h5>

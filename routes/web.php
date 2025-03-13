@@ -17,7 +17,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('uhelp')->group(function() {
+Route::prefix('happyhelp')->group(function() {
     Route::get('/{status?}', [TicketController::class, 'index'])->name('uhelp.index');
     Route::post('/reply', [TicketController::class, 'storeReply'])->name('uhelp.storeReply');
     Route::post('/update-ticket/{ticket}', [TicketController::class, 'update'])->name('uhelp.updateTicket');

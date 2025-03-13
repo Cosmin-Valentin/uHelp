@@ -8,7 +8,7 @@
                 <div>
                     <div class="activity-img">
                         <span>
-                            <img src="https://randomuser.me/api/portraits/men/{{ $ticket->author->id }}.jpg" alt="user avatar">
+                            <img src="{{ asset($ticket->author->id . '.jpg') }}" alt="user avatar">
                         </span>
                     </div>
                     <div class="activity-user-info">
@@ -28,7 +28,7 @@
                 <div>
                     <div class="activity-img">
                         <span>
-                            <img src="https://randomuser.me/api/portraits/men/{{ $ticket->assigner->id }}.jpg" alt="user avatar">
+                            <img src="{{ asset($ticket->author->id . '.jpg') }}" alt="user avatar">
                         </span>
                     </div>
                     <div class="activity-user-info">
@@ -51,7 +51,7 @@
                     <div>
                         <div class="activity-img">
                             <span>
-                                <img src="https://randomuser.me/api/portraits/men/{{ $ticket->assignee->id }}.jpg" alt="user avatar">
+                                <img src="{{ asset($ticket->author->id . '.jpg') }}" alt="user avatar">
                             </span>
                         </div>
                         <div class="activity-user-info">

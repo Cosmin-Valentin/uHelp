@@ -54,24 +54,24 @@ return new class extends Migration
         if (\App\Models\User::count() === 0) {
             \App\Models\User::insert([
                 [
-                    'name' => 'Admin User',
-                    'email' => 'superadmin@admin.com',
+                    'name' => 'Guliver Foyle',
+                    'email' => 'guliver@admin.com',
                     'password' => bcrypt('123456789'),
                     'role' => 'admin',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
                 [
-                    'name' => 'Agent User',
-                    'email' => 'agent@agent.com',
+                    'name' => 'Marie d\'Courtney',
+                    'email' => 'marie@agent.com',
                     'password' => bcrypt('123456789'),
                     'role' => 'agent',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
                 [
-                    'name' => 'Customer User',
-                    'email' => 'customer@customer.com',
+                    'name' => 'Y\'ang Yeovil',
+                    'email' => 'yang@customer.com',
                     'password' => bcrypt('123456789'),
                     'role' => 'customer',
                     'created_at' => now(),

@@ -3,7 +3,7 @@
         <div class="card-body">
             <div class="profile">
                 <div class="profile-img">
-                    <img src="https://randomuser.me/api/portraits/men/{{ $user->id }}.jpg" alt="user avatar">
+                    <img src="{{ asset($user->id . '.jpg') }}" alt="user avatar">
                 </div>
                 <h5 class="profile-name">{{ ucwords($user->name) }}</h5>
                 <small class="profile-email">{{ $user->email }}</small>

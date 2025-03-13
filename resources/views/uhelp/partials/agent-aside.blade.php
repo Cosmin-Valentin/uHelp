@@ -2,14 +2,14 @@
     <div class="aside-logo">
         <div class="logo">
             <a href="#" class="header-brand">
-                <img src="logo.svg" alt="logo">
+                <img src="{{ asset('logo.svg') }}" alt="logo">
             </a>
         </div>
     </div>
     <div class="aside-container">
         <div class="sidebar-user">
             <div class="user-pic">
-                <img src="https://randomuser.me/api/portraits/men/{{ $user->id }}.jpg" alt="user avatar">
+                <img src="{{ asset($user->id . '.jpg') }}" alt="user avatar">
             </div>
             <div class="user-info">
                 <h5>{{ $user->isAdmin ? 'Admin' : 'Agent' }}</h5>

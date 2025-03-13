@@ -1484,7 +1484,7 @@ footer.agent-footer {
 }
 
 .agent-reply-ticket .panel-title {
-    background: #184780;
+    background: var(--primary-color);
 }
 
 .customer-reply-ticket .panel-title::before,

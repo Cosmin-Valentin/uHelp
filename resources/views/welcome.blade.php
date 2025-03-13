@@ -42,7 +42,7 @@
                         <h6 class="welcome-login-title">Checkout the app</h6>
                     </div>
                     <div class="welcome-login-body">
-                        <img src="application-login.png" alt="login image">
+                        <img src="{{ asset('application-login.png') }}" alt="login image">
                         <h6 class="welcome-login-text">Try Here...😊</h6>
                         <p class="welcome-login-text">Checkout this cool Laravel project</p>
                         <div class="py-4">
@@ -50,7 +50,7 @@
                                 @if (Route::has('login'))
                                     @auth
                                         <li>
-                                            <a href="{{ url('/uhelp') }}" class="btn-blue">
+                                            <a href="{{ url('/happyhelp') }}" class="btn-blue">
                                                 Dashboard
                                             </a>
                                         </li>

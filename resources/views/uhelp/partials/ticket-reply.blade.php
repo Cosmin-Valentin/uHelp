@@ -6,7 +6,7 @@
         @foreach ($replies as $reply)
             <div class="card-body">
                 <div>
-                    <img src="https://randomuser.me/api/portraits/men/{{ $reply->author->id }}.jpg" alt="user avatar">
+                    <img src="{{ asset($reply->author->id . '.jpg') }}" alt="user avatar">
                     <div>
                         <div class="media-body">
                             <h5>{{ $reply->author->name }}</h5>

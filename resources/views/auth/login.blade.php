@@ -11,11 +11,11 @@
             
             <!-- Conditionally set email based on the role -->
             @if($role == 'admin')
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'superadmin@admin.com'" required autofocus autocomplete="username" />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'guliver@admin.com'" required autofocus autocomplete="username" />
             @elseif($role == 'agent')
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'agent@agent.com'" required autofocus autocomplete="username" />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'marie@agent.com'" required autofocus autocomplete="username" />
             @elseif($role == 'customer')
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'customer@customer.com'" required autofocus autocomplete="username" />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="'yang@customer.com'" required autofocus autocomplete="username" />
             @else
                 <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             @endif

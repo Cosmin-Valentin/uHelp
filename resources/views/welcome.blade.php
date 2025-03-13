@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>uHelp Clone</title>
+        <title>HappyHelp</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -42,7 +42,7 @@
                         <h6 class="welcome-login-title">Checkout the app</h6>
                     </div>
                     <div class="welcome-login-body">
-                        <img src="https://uhelp.spruko.com/images/application-login.png" alt="login image">
+                        <img src="application-login.png" alt="login image">
                         <h6 class="welcome-login-text">Try Here...😊</h6>
                         <p class="welcome-login-text">Checkout this cool Laravel project</p>
                         <div class="py-4">

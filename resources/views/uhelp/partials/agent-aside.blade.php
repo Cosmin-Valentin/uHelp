@@ -2,7 +2,7 @@
     <div class="aside-logo">
         <div class="logo">
             <a href="#" class="header-brand">
-                <img src="https://logo.clearbit.com/clearbit.com" alt="logo">
+                <img src="logo.svg" alt="logo">
             </a>
         </div>
     </div>

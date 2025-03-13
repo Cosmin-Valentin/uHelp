@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
-    --primary-color: rgba(51, 102, 255, 1);
-    --secondary-color: rgba(24, 71, 128, 1);
+    --primary-color: #780b9b;
+    --secondary-color: #4a1067;
     --title-color: #263871;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .banner {
-    background-image: linear-gradient(135deg, #3364f5 0%, #306eff 100%);
+    background-image: linear-gradient(135deg, #680d8c 0%, #a807c9 100%);
 }
 
 .header-container {
@@ -644,7 +644,7 @@ form#reOpen .btn-ticket {
 
 footer.customer-footer {
     color: #fff;
-    background: #23293a;
+    background: #4a1067;
     display: block;
     margin-top: auto;
     width: 100%;
@@ -664,7 +664,7 @@ footer.customer-footer {
 .customer-footer .footer-container p a {
     text-decoration: none;
     line-height: 2;
-    color: #424e79;
+    color: #b19cd9;
 }
 
 .form-group {
@@ -759,7 +759,7 @@ form .card-footer {
     left: 0;
     width: 270px;
     z-index: 1000;
-    background: #17263a;
+    background: #4a1067;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -917,7 +917,7 @@ form .card-footer {
 
 .slide-menu .slide-item.active,
 .slide-menu .slide-item:hover {
-    color: var(--primary-color);
+    color: #9370db;
 }
 
 .agent-main {

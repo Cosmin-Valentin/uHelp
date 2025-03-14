@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
+set -e  # Exit on any error
 
-echo "Running composer"
-composer global require hirak/prestissimo
-composer install --no-dev --prefer-dist --optimize-autoloader --working-dir=/var/www/html
+echo "Running Composer Install..."
+composer global require hirak/prestissimo || true
+composer install --no-dev --prefer-dist --optimize-autoloader
 
-echo "Caching config..."
+echo "Caching Config & Routes..."
+php artisan config:clear
 php artisan config:cache
-
-echo "Caching routes..."
 php artisan route:cache
 
+echo "Running Database Migrations..."
+php artisan migrate --force

@@ -1,19 +1,20 @@
 FROM richarvey/nginx-php-fpm:1.7.2
-COPY . .
 
-# Image config
-ENV SKIP_COMPOSER 1
-ENV WEBROOT /var/www/html/public
-ENV PHP_ERRORS_STDERR 1
-ENV RUN_SCRIPTS 1
-ENV REAL_IP_HEADER 1
+# Copy application files
+COPY . /var/www/html
 
-# Laravel config using environment variables
-ENV APP_ENV=${APP_ENV}
-ENV APP_DEBUG=${APP_DEBUG}
-ENV LOG_CHANNEL=${LOG_CHANNEL}
+# Set working directory
+WORKDIR /var/www/html
 
-# Allow composer to run as root
+# Ensure scripts are executable
+RUN chmod +x /var/www/html/scripts/00-laravel-deploy.sh
+
+# Allow Composer to run
 ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV SKIP_COMPOSER 0  # Enable composer installation
 
-CMD ["/start.sh"]
+# Run Laravel deploy script before starting server
+RUN /var/www/html/scripts/00-laravel-deploy.sh
+
+# Start Nginx & PHP-FPM
+CMD ["php-fpm", "-R"]

@@ -14,7 +14,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV SKIP_COMPOSER 0  # Enable composer installation
 
 # Run Laravel deploy script before starting server
-RUN /var/www/html/scripts/00-laravel-deploy.sh
+RUN scripts/00-laravel-deploy.sh
 
 # Start Nginx & PHP-FPM
 CMD ["/start.sh"]

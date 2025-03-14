@@ -10,5 +10,3 @@ php artisan config:clear
 php artisan config:cache
 php artisan route:cache
 
-echo "Running Database Migrations..."
-php artisan migrate --force

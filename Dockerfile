@@ -1,13 +1,13 @@
 FROM richarvey/nginx-php-fpm:1.7.2
 
-# Copy application files
-COPY . /var/www/html
-
-# Set working directory
+# Set working directory first
 WORKDIR /var/www/html
 
+# Copy application files
+COPY . .
+
 # Ensure scripts are executable
-RUN chmod +x /var/www/html/scripts/00-laravel-deploy.sh
+RUN chmod +x scripts/00-laravel-deploy.sh
 
 # Allow Composer to run
 ENV COMPOSER_ALLOW_SUPERUSER 1
@@ -17,4 +17,4 @@ ENV SKIP_COMPOSER 0  # Enable composer installation
 RUN /var/www/html/scripts/00-laravel-deploy.sh
 
 # Start Nginx & PHP-FPM
-CMD ["php-fpm", "-R"]
+CMD ["/start.sh"]

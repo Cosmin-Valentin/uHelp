@@ -2,6 +2,9 @@ FROM richarvey/nginx-php-fpm:2.0.0
  
 COPY . .
 
+# Install node and npm using apk
+RUN apk update && apk add --no-cache nodejs npm
+
 # Install node dependencies and build assets
 WORKDIR /var/www/html
 RUN npm install && npm run build

@@ -1,9 +1,6 @@
-FROM richarvey/nginx-php-fpm:3.1.0
+FROM richarvey/nginx-php-fpm:2.0.0
  
 COPY . .
-
-# Install node and npm
-RUN apt-get update && apt-get install -y nodejs npm
 
 # Install node dependencies and build assets
 WORKDIR /var/www/html
